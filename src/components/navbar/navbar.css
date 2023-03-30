@@ -1,0 +1,22 @@
+.navbar{
+    padding: 5px 0px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    height: 15vh;
+}
+.navbar .navbar-brand img{
+    width: 80px;
+}
+.navbar .navbar-nav .nav-item{
+    margin-right: 25px;
+}
+.navbar .navbar-nav .nav-item .nav-link{
+    font-size: 17px;
+    color: rgb(180, 180, 180);
+    text-transform: uppercase;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: black;
+}
+.navbar .navbar-nav .nav-item .nav-link.active{
+    color: black;
+}
