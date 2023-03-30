@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from '../components/navbar/Navbar'
+
+
 
 function Characters() {
   return (
     <div>
-      <h1>All Characters</h1>
+        <Navbar/>
     </div>
   )
 }

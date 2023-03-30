@@ -9,14 +9,14 @@
 .navbar .navbar-nav .nav-item{
     margin-right: 25px;
 }
-.navbar .navbar-nav .nav-item .nav-link{
+.navbar .navbar-nav .nav-item .nav_link >*{
     font-size: 17px;
     color: rgb(180, 180, 180);
     text-transform: uppercase;
 }
-.navbar .navbar-nav .nav-item .nav-link:hover{
+.navbar .navbar-nav .nav-item .nav_link:hover >*{
     color: black;
 }
-.navbar .navbar-nav .nav-item .nav-link.active{
+.navbar .navbar-nav .nav-item .nav_link.active >*{
     color: black;
 }
