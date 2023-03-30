@@ -2,12 +2,14 @@ import React from 'react'
 import './character-card.css'
 
 function CharacterCard({character}) {
+  const status = character.status
+  const statusClassName = status === 'Alive'? 'alive': status === 'Dead'  ? 'dead'  : 'unknown';
   return (
     <div className="col-md-4 mb-4">
         <div className="box">
             <div className="img_box">
-              <img src={character.image} alt="" className="alive img-fluid" />
-              <span className='status alive'>{character.status}</span>
+              <img src={character.image} alt="" className={`alive img-fluid ${statusClassName}`} />
+              <span className={`status ${statusClassName}`}>{character.status}</span>
             </div>
             <h3 className='name'>{character.name}</h3>
             <div className="properties_box">
