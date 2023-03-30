@@ -17,14 +17,14 @@ function Hero() {
                 <h1>Full Stack Developer</h1>
 
                 <div className="technologies">
-                    <p className="tech-head">Technologies Used</p>
+                    <p className="tech-head">Technologies Used :</p>
                     <div className="tech-icons">
                         <FaReact/>
                         <GrGraphQl/>
                         <SiApollographql/>
                         <BsBootstrapFill/>
                     </div>
-                    <button className="button">Source Code <AiFillGithub/></button>
+                    <button className="button">Source Code <AiFillGithub className='github'/></button>
                 </div>
             </div>
             <div className="col-md-6 img_section">

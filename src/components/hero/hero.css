@@ -1,4 +1,82 @@
 .hero_section{
     max-height: 85vh;
     height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    font-family: math;
+}
+.hero_section .img_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero_section .img_section img{
+    max-width: 80% !important;
+}
+.hero_section .text_section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero_section .text_section p{
+    margin-bottom: 0px;
+}
+.hero_section .text_section .span{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.hero_section .text_section h1{
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: bold;
+}
+.hero_section .text_section .technologies .tech-head{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.hero_section .text_section .technologies .tech-icons{
+    display: flex;
+    margin-top: 15px;
+}
+.hero_section .text_section .technologies .tech-icons > *{
+    margin-right: 20px;
+    font-size: 35px;
+}
+.hero_section .text_section .technologies .button{
+    padding: 12px 35px;
+    margin-top: 45px;
+    border: 1px solid black;
+    font-size: 18px;
+    outline: none;
+    background: black;
+    color: white;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.hero_section .text_section .technologies .button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: white;
+    transition: 0.3s linear;
+    z-index: -1;
+}
+.hero_section .text_section .technologies .button:hover::before{
+    width: 100%;
+    left: 0;
+    color: black
+}
+.hero_section .text_section .technologies .button:hover{
+    color: black;
+}
+.hero_section .text_section .technologies .button .github{
+    font-size: 30px;
+    margin-left: 15px;
 }
