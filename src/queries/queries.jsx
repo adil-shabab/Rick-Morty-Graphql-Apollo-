@@ -9,6 +9,7 @@ export const GET_ALL_CHARACTERS = gql`
                 image
                 species
                 gender
+                status
             }
             info{
                 count
