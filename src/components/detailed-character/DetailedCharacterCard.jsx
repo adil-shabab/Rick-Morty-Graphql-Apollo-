@@ -10,7 +10,8 @@ function DetailedCharacterCard({character}) {
   const statusClassName = status === 'Alive'? 'alive': status === 'Dead'  ? 'dead'  : 'unknown';
 
   return (
-    <div className="col-md-6 mb-4">
+    <div className="row">
+      <div className="col-md-6 mb-4">
         <div className="box left_box">
             <div className="img_box">
               <img src={character.image} alt="" className={`img-fluid ${statusClassName}`} />
@@ -38,8 +39,16 @@ function DetailedCharacterCard({character}) {
                 <div className="value">{character.origin.name}</div>
               </div>
             </div>
-
         </div>
+      </div>
+      <div className="col-md-6 right_box row">
+        <h5 className="head_txt">All Episodes</h5>
+        {character.episode.map((episode)=>(
+          <div key={episode.id} className='col-md-6'>
+            <div className="episode">{episode.name}</div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

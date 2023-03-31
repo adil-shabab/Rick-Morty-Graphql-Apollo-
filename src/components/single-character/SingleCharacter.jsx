@@ -18,9 +18,7 @@ function SingleCharacter() {
  
 
   return (
-    <div className='row'>
-        <DetailedCharacterCard key={data?.character.id} character={data?.character}/>
-    </div>
+    <DetailedCharacterCard key={data?.character.id} character={data?.character}/>
   )
 }
 

@@ -8,6 +8,8 @@
     flex-direction: column;
     padding: 40px 32px;
     font-family: math;
+    max-height: 80vh;
+    overflow: hidden;
 }
 .left_box .img_box{
     width: 180px;
@@ -105,6 +107,42 @@
 
 
 
+
+/* width */
+.right_box::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+.right_box::-webkit-scrollbar-track {
+    background: #c6c6c6af;
+    border-radius: 10px;
+}
+/* Handle */
+.right_box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #529ac6;
+}
+  /* Handle on hover */
+.right_box::-webkit-scrollbar-thumb:hover {
+    background: #8d8d8d;
+}
 .right_box{
-    border-right: 1px solid rgb(87, 87, 87);
+    border-left: 1px solid rgba(148, 148, 148, 0.908);
+    padding: 15px 10px 35px 10px;
+    max-height: 79vh;
+    margin-top: 3vh;
+    overflow-y: scroll;
+    font-family: math;
+}
+.right_box .episode{
+    padding: 8px;
+    background-color: rgba(211, 211, 211, 0.647);
+    margin-bottom: 8px;
+    font-size: 14px
+}
+.right_box .head_txt{
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
