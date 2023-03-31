@@ -8,7 +8,7 @@ function CharacterCard({character}) {
     <div className="col-md-4 mb-4">
         <div className="box">
             <div className="img_box">
-              <img src={character.image} alt="" className={`alive img-fluid ${statusClassName}`} />
+              <img src={character.image} alt="" className={`img-fluid ${statusClassName}`} />
               <span className={`status ${statusClassName}`}>{character.status}</span>
             </div>
             <h3 className='name'>{character.name}</h3>

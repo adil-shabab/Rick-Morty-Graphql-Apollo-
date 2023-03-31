@@ -4,7 +4,7 @@ import TextImg from '../../images/text.png'
 import { useQuery } from '@apollo/client'
 import { GET_ALL_CHARACTERS } from '../../queries/queries'
 import CharacterCard from '../character-card/CharacterCard'
-
+import Pagination from '../pagination/Pagination'
 
 function CharactersTop() {
 
@@ -25,6 +25,9 @@ function CharactersTop() {
     })
 
 
+    const handlePageChange = (pageNum) => {
+        setPage(pageNum)
+    }
 
 
 
@@ -71,11 +74,13 @@ function CharactersTop() {
             </div>
         </div>
 
-        <div className="mt-5 mb-5 row">
+        <div className="mt-5 row">
             {data?.characters.results.map((character)=>(
                 <CharacterCard key={character.id} character={character}/>
             ))}  
         </div>
+
+        <Pagination currentPage={page} totalPages={data?.characters?.info.pages} onPageChange={handlePageChange} />
       </div>
     </div>
   )
