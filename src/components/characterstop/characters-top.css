@@ -11,13 +11,10 @@
 }
 .characters_top .search_section{
     margin-top: 20px;
-}
-.characters_top .search_section .form{
-    display: flex;
+    padding: 30px 0px;
+    background: white;
 }
 .characters_top .search_section .form .input_div{
-    width: 23%;
-    margin-right: 1.5%;
     position: relative;
 }
 .characters_top .search_section .form .input_div label{

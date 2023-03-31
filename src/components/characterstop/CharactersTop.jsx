@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './characters-top.css'
 import TextImg from '../../images/text.png'
 import { useQuery } from '@apollo/client'
@@ -8,7 +8,26 @@ import Pagination from '../pagination/Pagination'
 
 function CharactersTop() {
 
-    const [page, setPage] = useState(1)
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+  
+    const handleScroll = () => {
+      if (window.scrollY > 370) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+      console.log(isSticky)
+    };
+  
+
+    const [page, setPage] = useState(3)
     const [filter, setFilter] = useState({
         name: '',
         status: '',
@@ -37,13 +56,13 @@ function CharactersTop() {
         <div className="img_section">
             <img src={TextImg} alt="" className="img-fluid" />
         </div>
-        <div className="search_section">
-            <div className="form">
-                <div className="input_div">
+        <div className={`search_section ${isSticky ? "sticky-top" : ""}`}>
+            <div className="form row">
+                <div className="col-md-3 input_div">
                     <label>Name</label>
                     <input type="text"/>
                 </div>
-                <div className="input_div">
+                <div className="col-md-3 input_div">
                     <label>Gender</label>
                     <select name="gender" id="">
                         <option value="All">All</option>
@@ -53,7 +72,7 @@ function CharactersTop() {
                         <option value="Unknown">Unknown</option>
                     </select>
                 </div>
-                <div className="input_div">
+                <div className="col-md-3 input_div">
                     <label>Species</label>
                     <select name="species" id="">
                         <option value="All">All</option>
@@ -62,7 +81,7 @@ function CharactersTop() {
                         <option value="Robot">Robot</option>
                     </select>
                 </div>
-                <div className="input_div">
+                <div className="col-md-3 input_div">
                     <label>Status</label>
                     <select name="status" id="">
                         <option value="All">All</option>
@@ -74,7 +93,7 @@ function CharactersTop() {
             </div>
         </div>
 
-        <div className="mt-5 row">
+        <div className="mt-3 row">
             {data?.characters.results.map((character)=>(
                 <CharacterCard key={character.id} character={character}/>
             ))}  
