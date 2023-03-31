@@ -1,0 +1,62 @@
+.episodes_top{
+    margin-bottom: 50px;
+    font-family: math;
+}
+.episodes_top .img_section{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.episodes_top .img_section img{
+    height: 20vh;
+}
+.episodes_top .form_section{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.episodes_top .form_section input{
+    border: 1px solid rgba(197, 197, 197, 0.795);
+    width: 70%;
+    height: 50px;
+    padding: 15px;
+    outline: none;
+}
+.episodes_top .episodes_section{
+    margin-top: 50px;
+}
+.episodes_top .episodes_section .episode_box{
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 25px 15px;
+    border: 1px solid #e0e0e0;
+    background-color: rgba(228, 228, 228, 0.353);
+}
+.episodes_top .episodes_section .episode_box .details{
+    display: flex;
+    margin-bottom: 5px;
+}
+.episodes_top .episodes_section .episode_box .details p{
+    background-color: rgb(233, 233, 233);
+    font-size: 15px;
+    margin-bottom: 0px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.episodes_top .episodes_section .episode_box .details .label{
+    width: 30%;
+    margin-right: 3%;
+}
+.episodes_top .episodes_section .episode_box .details .value{
+    width: 65%;
+    font-weight: bold;
+}

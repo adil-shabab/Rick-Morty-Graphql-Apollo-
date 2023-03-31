@@ -44,3 +44,25 @@ export const GET_CHARACTER = gql`
         }
     }
 `;
+
+
+
+
+
+export const GET_ALL_EPISODES = gql`
+    query getEpisodes($page: Int!){
+        episodes(page: $page){
+            results{
+                id
+                name
+                air_date
+            }
+            info {
+                count
+                pages
+                next
+                prev
+            }
+        }
+    }
+`;
