@@ -50,8 +50,8 @@ export const GET_CHARACTER = gql`
 
 
 export const GET_ALL_EPISODES = gql`
-    query getEpisodes($page: Int!){
-        episodes(page: $page){
+    query getEpisodes($page: Int!, $filter: FilterEpisode){
+        episodes(page: $page, filter: $filter){
             results{
                 id
                 name

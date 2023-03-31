@@ -9,13 +9,27 @@ function EpisodeTop() {
 
   const [page, setPage] = useState(1)
 
+  const [filter, setFilter] = useState({
+    name: ''
+  })
+
+  const handleNameSearch = (event) => {
+    const {value} = event.target;
+    setFilter({
+      name: value,
+    })
+    setPage(1)
+  }
+
+
   const handlePageChange = (pageNum) =>{
     setPage(pageNum)
   }
   
   const {data, error, loading} = useQuery(GET_ALL_EPISODES, {
     variables : {
-        page: page
+        page: page,
+        filter: filter
     }
   })
 
@@ -27,7 +41,7 @@ function EpisodeTop() {
             <img className='img-fluid' src={TextImg} alt="" />
         </div>
         <div className="form_section">
-            <input type="text" placeholder='Search By Episode Name' />
+            <input value={filter.name} onChange={handleNameSearch} type="text" placeholder='Search By Episode Name' />
         </div>
         <div className="episodes_section">
             <div className="row">
