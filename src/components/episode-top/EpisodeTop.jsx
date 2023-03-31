@@ -3,6 +3,7 @@ import './episode-top.css'
 import TextImg from '../../images/text.png'
 import { useQuery } from '@apollo/client'
 import { GET_ALL_EPISODES } from '../../queries/queries'
+import Pagination from '../pagination/Pagination'
 
 function EpisodeTop() {
 
@@ -48,6 +49,8 @@ function EpisodeTop() {
                 ))}
             </div>
         </div>
+
+        <Pagination currentPage={page} totalPages={data?.episodes?.info.pages} onPageChange={handlePageChange} />
       </div>
     </div>
   )
