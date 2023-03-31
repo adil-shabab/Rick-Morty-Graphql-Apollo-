@@ -49,6 +49,25 @@ function CharactersTop() {
     }
 
 
+    const handleFilterChange = (event) => {
+      const {name, value} = event.target;
+      setFilter((prevState)=> ({
+        ...prevState,
+        [name]:value,
+      }))
+      setPage(1)
+    }
+
+
+    const handleNameSearch = (event) => {
+      const {value} = event.target;
+      setFilter((prevState)=> ({
+        ...prevState,
+        name: value,
+      }))
+      setPage(1)
+    }
+
 
   return (
     <div className='characters_top'>
@@ -60,22 +79,22 @@ function CharactersTop() {
             <div className="form row">
                 <div className="col-md-3 input_div">
                     <label>Name</label>
-                    <input type="text"/>
+                    <input value={filter.name} onChange={handleNameSearch} type="text"/>
                 </div>
                 <div className="col-md-3 input_div">
                     <label>Gender</label>
-                    <select name="gender" id="">
-                        <option value="All">All</option>
+                    <select name="gender" id="" onChange={handleFilterChange}>
+                        <option value="">All</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Genderless">Genderless</option>
-                        <option value="Unknown">Unknown</option>
+                        <option value="unknown">Unknown</option>
                     </select>
                 </div>
                 <div className="col-md-3 input_div">
                     <label>Species</label>
-                    <select name="species" id="">
-                        <option value="All">All</option>
+                    <select name="species" id="" onChange={handleFilterChange}>
+                        <option value="">All</option>
                         <option value="Human">Human</option>
                         <option value="Alien">Alien</option>
                         <option value="Robot">Robot</option>
@@ -83,11 +102,11 @@ function CharactersTop() {
                 </div>
                 <div className="col-md-3 input_div">
                     <label>Status</label>
-                    <select name="status" id="">
-                        <option value="All">All</option>
+                    <select name="status" id="" onChange={handleFilterChange}>
+                        <option value="">All</option>
                         <option value="Alive">Alive</option>
                         <option value="Dead">Dead</option>
-                        <option value="Unknown">Unknown</option>
+                        <option value="unknown">Unknown</option>
                     </select>
                 </div>
             </div>
