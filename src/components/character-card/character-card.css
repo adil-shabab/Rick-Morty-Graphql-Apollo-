@@ -8,6 +8,9 @@
     padding: 40px 32px;
     font-family: math;
 }
+.box.card{
+    cursor: pointer;
+}
 .box .img_box{
     width: 150px;
     position: relative;

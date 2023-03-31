@@ -12,7 +12,7 @@ function DetailedCharacterCard({character}) {
   return (
     <div className="row">
       <div className="col-md-6 mb-4">
-        <div className="box left_box">
+        <div className="box bg-white left_box">
             <div className="img_box">
               <img src={character.image} alt="" className={`img-fluid ${statusClassName}`} />
               <span className={`status ${statusClassName}`}>{character.status}</span>

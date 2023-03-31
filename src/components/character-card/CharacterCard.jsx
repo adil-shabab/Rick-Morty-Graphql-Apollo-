@@ -1,12 +1,21 @@
 import React from 'react'
 import './character-card.css'
+import { useNavigate } from 'react-router-dom'
 
 function CharacterCard({character}) {
+
+  const navigate = useNavigate()
+
+  const handleCharacterClick = () => {
+    navigate(`/characters/${character.id}`)
+  }
+
+
   const status = character.status
   const statusClassName = status === 'Alive'? 'alive': status === 'Dead'  ? 'dead'  : 'unknown';
   return (
-    <div className="col-md-4 mb-4">
-        <div className="box">
+    <div onClick={handleCharacterClick} className="col-md-4 mb-4">
+        <div className="box card">
             <div className="img_box">
               <img src={character.image} alt="" className={`img-fluid ${statusClassName}`} />
               <span className={`status ${statusClassName}`}>{character.status}</span>

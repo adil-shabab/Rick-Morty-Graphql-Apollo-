@@ -114,7 +114,7 @@ function CharactersTop() {
 
         <div className="mt-3 row">
             {data?.characters.results.map((character)=>(
-                <CharacterCard key={character.id} character={character}/>
+                <CharacterCard key={character.id} character={character} />
             ))}  
         </div>
 
