@@ -27,7 +27,7 @@ function CharactersTop() {
     };
   
 
-    const [page, setPage] = useState(3)
+    const [page, setPage] = useState(1)
     const [filter, setFilter] = useState({
         name: '',
         status: '',

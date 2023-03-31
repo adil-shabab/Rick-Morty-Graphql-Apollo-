@@ -48,13 +48,17 @@ function Pagination({currentPage, totalPages, onPageChange}) {
         }
     }
 
+    const handlePageChange = (pageNum) =>{
+        onPageChange(pageNum)
+    }
+
 
 
   return (
     <div className='pagination'>
       <button disabled={currentPage === 1} onClick={handlePrevClick}>Prev</button>
       {displayPages.map((page)=>(
-        <button className={page === currentPage ? 'active': ''} key={page}>{page}</button>
+        <button onClick={()=>handlePageChange(page)} className={page === currentPage ? 'active': ''} key={page}>{page}</button>
       ))}
       <button disabled={currentPage === totalPages} onClick={handleNextClick}>Next</button>
     </div>
