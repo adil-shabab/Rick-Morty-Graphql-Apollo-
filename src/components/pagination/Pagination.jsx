@@ -12,7 +12,7 @@ function Pagination({currentPage, totalPages, onPageChange}) {
         const calculateDisplayPages = () =>{
             let pages = []
     
-            if (totalPages <= 5){
+            if (totalPages <= 2){
                 for (let i=1; i <= totalPages; i++){
                     pages.push(i)
                 }
@@ -42,7 +42,7 @@ function Pagination({currentPage, totalPages, onPageChange}) {
     <div className='pagination'>
       <button>Prev</button>
       {displayPages.map((page)=>(
-        <button key={page}>{page}</button>
+        <button className={page === currentPage ? 'active': ''} key={page}>{page}</button>
       ))}
       <button>Next</button>
     </div>
