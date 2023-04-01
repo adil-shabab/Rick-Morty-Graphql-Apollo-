@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './single-character.css'
 import { useQuery } from '@apollo/client'
 import { GET_CHARACTER } from '../../queries/queries'
@@ -16,11 +16,16 @@ function SingleCharacter() {
         id: id
     }
   })
+
+
+  if (loading) {
+    <div class="loader">Loading
+      <span></span>
+    </div>
+  }
  
 
-  return (
-    <DetailedCharacterCard key={data?.character.id} character={data?.character}/>
-  )
+  return <DetailedCharacterCard key={data?.character.id} character={data?.character}/>
 }
 
 export default SingleCharacter

@@ -48,27 +48,32 @@ function EpisodeTop() {
             <input value={filter.name} onChange={handleNameSearch} type="text" placeholder='Search By Episode Name' />
         </div>
         <div className="episodes_section">
+            {loading ? 
+            <div class="loader">Loading
+              <span></span>
+            </div> :
             <div className="row">
-                {data?.episodes.results.map((episode)=>(
-                    <div onClick={()=>navigate(`/episodes/${episode.id}`)} className="col-md-4">
-                        <div className="episode_box">
-                            <div className="text_section">
-                                <div className="details">
-                                    <p className='label'>Name</p>
-                                    <p className='value'>{episode.name}</p>
-                                </div>
-                                <div className="details">
-                                    <p className='label'>Date</p>
-                                    <p className='value'>{episode.air_date}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+              {data?.episodes.results.map((episode)=>(
+                  <div onClick={()=>navigate(`/episodes/${episode.id}`)} className="col-md-4">
+                      <div className="episode_box">
+                          <div className="text_section">
+                              <div className="details">
+                                  <p className='label'>Name</p>
+                                  <p className='value'>{episode.name}</p>
+                              </div>
+                              <div className="details">
+                                  <p className='label'>Date</p>
+                                  <p className='value'>{episode.air_date}</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              ))}
             </div>
+            }
         </div>
 
-        <Pagination currentPage={page} totalPages={data?.episodes?.info.pages} onPageChange={handlePageChange} />
+        {!loading && <Pagination currentPage={page} totalPages={data?.episodes?.info.pages} onPageChange={handlePageChange} />}
       </div>
     </div>
   )

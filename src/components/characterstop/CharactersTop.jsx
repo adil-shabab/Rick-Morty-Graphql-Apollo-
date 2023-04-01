@@ -112,13 +112,18 @@ function CharactersTop() {
             </div>
         </div>
 
+        {loading ? 
+        <div class="loader">Loading
+          <span></span>
+        </div> : 
         <div className="mt-3 row">
-            {data?.characters.results.map((character)=>(
-                <CharacterCard key={character.id} character={character} />
-            ))}  
+        {data?.characters.results.map((character)=>(
+            <CharacterCard key={character.id} character={character} />
+        ))}  
         </div>
+        }
+        {!loading && <Pagination currentPage={page} totalPages={data?.characters?.info.pages} onPageChange={handlePageChange} />}
 
-        <Pagination currentPage={page} totalPages={data?.characters?.info.pages} onPageChange={handlePageChange} />
       </div>
     </div>
   )

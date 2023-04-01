@@ -25,22 +25,27 @@ function SingleEpisode() {
     
   return (
     <div className='single_episode'>
-      <div className="container">
-        <div className="top_section">
-          <h1 className='episode_name'>{data?.episode.name}</h1>
-          <h5>Aired Date: {data?.episode.air_date}</h5>
-        </div>
-        <div className="row">
-          {data?.episode.characters.map((character)=>(
-          <div onClick={()=>navigate(`/characters/${character.id}`)} key={character.id} className="col-md-2">
-            <div className="img-box">
-              <img src={character.image} alt="" />
-              <h6>{character.name}</h6>
-            </div>
+      {loading ? 
+        <div class="loader">Loading
+          <span></span>
+        </div>   :
+        <div className="container">
+          <div className="top_section">
+            <h1 className='episode_name'>{data?.episode.name}</h1>
+            <h5>Aired Date: {data?.episode.air_date}</h5>
           </div>
-          ))}
+          <div className="row">
+            {data?.episode.characters.map((character)=>(
+            <div onClick={()=>navigate(`/characters/${character.id}`)} key={character.id} className="col-md-2">
+              <div className="img-box">
+                <img src={character.image} alt="" />
+                <h6>{character.name}</h6>
+              </div>
+            </div>
+            ))}
+          </div>
         </div>
-      </div>
+      }
     </div>
   )
 }
