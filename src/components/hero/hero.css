@@ -101,3 +101,24 @@
     font-size: 30px;
     margin-left: 15px;
 }
+
+
+
+@media screen and (max-width: 500px) {
+    .hero_section{
+        height: auto;
+    }
+    .hero_section .text_section{
+        margin-top: 80px;
+    }
+    .hero_section .text_section h1{
+        font-size: 30px;
+    }
+    .hero_section .text_section .span{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .hero_section .img_section{
+        margin-top: 50px;
+    }
+}

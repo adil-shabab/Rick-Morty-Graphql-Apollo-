@@ -77,11 +77,11 @@ function CharactersTop() {
         </div>
         <div className={`search_section ${isSticky ? "sticky-top" : ""}`}>
             <div className="form row">
-                <div className="col-md-3 input_div">
+                <div className="col-md-3 mb-md-0 mb-4 input_div">
                     <label>Name</label>
                     <input value={filter.name} onChange={handleNameSearch} type="text"/>
                 </div>
-                <div className="col-md-3 input_div">
+                <div className="col-md-3 mb-md-0 mb-4 input_div">
                     <label>Gender</label>
                     <select name="gender" id="" onChange={handleFilterChange}>
                         <option value="">All</option>
@@ -91,7 +91,7 @@ function CharactersTop() {
                         <option value="unknown">Unknown</option>
                     </select>
                 </div>
-                <div className="col-md-3 input_div">
+                <div className="col-md-3 mb-md-0 mb-4 input_div">
                     <label>Species</label>
                     <select name="species" id="" onChange={handleFilterChange}>
                         <option value="">All</option>
@@ -100,7 +100,7 @@ function CharactersTop() {
                         <option value="Robot">Robot</option>
                     </select>
                 </div>
-                <div className="col-md-3 input_div">
+                <div className="col-md-3 mb-md-0 mb-4 input_div">
                     <label>Status</label>
                     <select name="status" id="" onChange={handleFilterChange}>
                         <option value="">All</option>

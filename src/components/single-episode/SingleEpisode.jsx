@@ -36,7 +36,7 @@ function SingleEpisode() {
           </div>
           <div className="row">
             {data?.episode.characters.map((character)=>(
-            <div onClick={()=>navigate(`/characters/${character.id}`)} key={character.id} className="col-md-2">
+            <div onClick={()=>navigate(`/characters/${character.id}`)} key={character.id} className="col-md-2 col-6">
               <div className="img-box">
                 <img src={character.image} alt="" />
                 <h6>{character.name}</h6>

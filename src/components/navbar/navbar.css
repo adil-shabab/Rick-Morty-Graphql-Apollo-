@@ -20,3 +20,31 @@
 .navbar .navbar-nav .nav-item .nav_link.active >*{
     color: black;
 }
+
+
+@media screen and (max-width: 500px) {
+    .navbar{
+        height: auto;
+        border-bottom: 1px solid gray;
+        padding: 20px 0px;
+    }
+    .navbar #navbarSupportedContent{
+        margin-top: 20px;
+    }
+    .navbar .navbar-toggler{
+        border: none !important;
+        outline: none !important;
+    }
+    .navbar .navbar-toggler.collapsed{
+        border: none !important;
+        outline: none !important;
+    }
+    .navbar-toggler:focus{
+        outline: none !important;
+        box-shadow: none;
+    }
+    .navbar .navbar-toggler-icon{
+        border: none !important;
+        outline: none !important;
+    }
+}

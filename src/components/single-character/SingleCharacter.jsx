@@ -19,9 +19,7 @@ function SingleCharacter() {
 
 
   if (loading) {
-    <div class="loader">Loading
-      <span></span>
-    </div>
+    return <div class="loader">Loading<span></span></div>
   }
  
 

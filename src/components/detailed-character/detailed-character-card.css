@@ -11,6 +11,7 @@
     max-height: 80vh;
     overflow: hidden;
 }
+
 .left_box .img_box{
     width: 180px;
     position: relative;
@@ -145,4 +146,14 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .left_box{
+        max-height: auto;
+    }
+    .right_box{
+        max-height: unset;
+        overflow: hidden;
+    }
 }

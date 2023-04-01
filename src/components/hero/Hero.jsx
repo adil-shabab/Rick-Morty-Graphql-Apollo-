@@ -12,7 +12,7 @@ function Hero() {
     <div className='hero_section'>
       <div className="container">
         <div className="row">
-            <div className="col-md-6 text_section">
+            <div className="order-md-1 order-2 col-md-6 text_section">
                 <p className='span'>Rick & Morty API by Adil Shabab</p>
                 <h1>Full Stack Developer</h1>
 
@@ -24,7 +24,7 @@ function Hero() {
                         <SiApollographql/>
                         <BsBootstrapFill/>
                     </div>
-                    <button className="button">Source Code <AiFillGithub className='github'/></button>
+                    <a href="https://github.com/adil-shabab/Rick-Morty-Graphql-Apollo-"><button className="button">Source Code <AiFillGithub className='github'/></button></a>
                 </div>
             </div>
             <div className="col-md-6 img_section">

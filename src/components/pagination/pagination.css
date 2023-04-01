@@ -18,3 +18,9 @@
     background-color: rgb(162, 162, 216);
     color: white;
 }
+
+@media screen and (max-width: 500px) {
+    .pagination button{
+        padding: 2px 8px;
+    }
+}
