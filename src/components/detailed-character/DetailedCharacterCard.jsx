@@ -1,7 +1,13 @@
 import React from 'react'
 import './detailed-character-card.css'
+import { useNavigate } from 'react-router-dom';
 
 function DetailedCharacterCard({character}) {
+
+
+  const navigate = useNavigate()
+
+
   if (!character) {
     return null; // or some other fallback UI
   }
@@ -45,7 +51,7 @@ function DetailedCharacterCard({character}) {
         <h5 className="head_txt">All Episodes</h5>
         {character.episode.map((episode)=>(
           <div key={episode.id} className='col-md-6'>
-            <div className="episode">{episode.name}</div>
+            <div style={{cursor: 'pointer'}} onClick={()=>navigate(`/episodes/${episode.id}`)} className="episode">{episode.name}</div>
           </div>
         ))}
       </div>

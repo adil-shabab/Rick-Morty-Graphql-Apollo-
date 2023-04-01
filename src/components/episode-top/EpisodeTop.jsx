@@ -4,8 +4,11 @@ import TextImg from '../../images/text.png'
 import { useQuery } from '@apollo/client'
 import { GET_ALL_EPISODES } from '../../queries/queries'
 import Pagination from '../pagination/Pagination'
+import { useNavigate } from 'react-router-dom'
 
 function EpisodeTop() {
+
+  const navigate = useNavigate()
 
   const [page, setPage] = useState(1)
 
@@ -34,6 +37,7 @@ function EpisodeTop() {
   })
 
 
+
   return (
     <div className='episodes_top'>
       <div className="container">
@@ -46,7 +50,7 @@ function EpisodeTop() {
         <div className="episodes_section">
             <div className="row">
                 {data?.episodes.results.map((episode)=>(
-                    <div className="col-md-4">
+                    <div onClick={()=>navigate(`/episodes/${episode.id}`)} className="col-md-4">
                         <div className="episode_box">
                             <div className="text_section">
                                 <div className="details">
