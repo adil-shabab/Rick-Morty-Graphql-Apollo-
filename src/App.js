@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Characters from './pages/Characters';
 import Episodes from './pages/Episodes';
 import Character from './pages/Character';
+import Episode from './pages/Episode';
 
 
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/characters" element={<Characters/>}/>
           <Route path="/characters/:id" element={<Character/>}/>
           <Route path="/episodes" element={<Episodes/>}/>
+          <Route path="/episodes/:id" element={<Episode/>}/>
         </Routes>
       </Router>
 

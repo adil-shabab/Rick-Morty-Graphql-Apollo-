@@ -1,0 +1,42 @@
+.single_episode{
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    font-family: math;
+}
+.single_episode .top_section{
+    padding-bottom: 85px;
+    margin-top: 50px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 85px;
+}
+.single_episode .top_section h1.episode_name{
+    font-size: 55px;
+    font-weight: bold;
+}
+.single_episode .top_section h5{
+    font-size: 20px;
+}
+.single_episode .img-box{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.single_episode .img-box img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.single_episode .img-box h6{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.681);
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
