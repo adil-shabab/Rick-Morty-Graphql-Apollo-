@@ -1,5 +1,5 @@
 
-Live Demo : 👉https://rick-morty-apollo.netlify.app/👈
+Live Demo : 👉  https://rick-morty-apollo.netlify.app  👈
 
 
 # Getting Started with Create React App
